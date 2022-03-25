@@ -1,0 +1,20 @@
+##在application.yml前加载
+##注册到哪里去
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://root:root@localhost:7099/eureka
+#  instance:
+#    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+##对应映射规则中的{application}部分
+#spring:
+#  application:
+#    name: zuul
+#  cloud:
+#    config:
+#      #对应映射规则中的{label}部分{分支}
+#      label: master
+#      #对应Config Server中的地址
+#      uri: http://localhost:8070
+#      #对应映射规则中的{profile}部分
+#      profile: dev

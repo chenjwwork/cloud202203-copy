@@ -1,0 +1,40 @@
+#Eureka注册地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:root@localhost:7001/eureka
+  instance:
+    instance-id: config:${server.port}
+
+spring:
+  application:
+    name: springcloud-configserver  #注册进Eueka服务器的微服务名
+  cloud:
+    config:
+      server:
+        git:
+          #uri: https://gitee.com/cjwdemayun/dev-project.git #Gitee上面的git仓库地址
+          uri: https://gitee.com/chenjwwork/dev-project.git
+#          username: chenjwwork@163.com
+#          password: c847501105
+          search-paths: dev-project   #搜索目录
+        default-label: master
+      #读取分支
+server:
+  port: 3344
+
+#rabbitmq相关配置 15672是Web管理界面的端口；5672是MQ访问的端口
+rabbitmq:
+  host: localhost
+  port: 5672
+  username: root
+  password: root
+
+# rabbitmq相关配置，暴露bus刷新配置的端点
+# 暴露监控端点
+management:
+  endpoints: #暴露bus刷新配置的端点
+    web:
+      exposure:
+        include: "bus-refresh"
+

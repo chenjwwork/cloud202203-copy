@@ -11,8 +11,29 @@
 
   <modules>
     <module>cloud-provider-payment8001</module>
-    <module>cloud_consumer-order80</module>
+    <module>cloud-consumer-order80</module>
     <module>cloud-api-commons</module>
+    <module>cloud-eureka-server7001</module>
+    <module>cloud-erueka-server7002</module>
+    <module>cloud-provider-payment8002</module>
+    <module>cloud-providerZK-payment8004</module>
+    <module>cloud-consumerzk-order80</module>
+    <module>cloud-providerconsul-payment8006</module>
+    <module>cloud-consumerconsul-order80</module>
+    <module>cloud-consumer-hystrix-dashboard9001</module>
+    <module>cloud-zuul-server8045</module>
+    <module>cloud-config-center-3344</module>
+    <module>cloud-consumer-feign80</module>
+    <module>cloud-provider-hystrix-payment8001</module>
+    <module>cloud-consumer-feign-hystrix-order80</module>
+    <module>cloud-consumer-turbin9002</module>
+    <module>cloud-gateway-gateway9527</module>
+    <module>cloud-config-center-3355</module>
+    <module>cloud-config-center-3366</module>
+      <module>cloud-stream-rabbitmq-provider8801</module>
+      <module>cloud-stream-rabbitmq-consumer8802</module>
+    <module>cloud-stream-rabbitmq-consumer8803</module>
+    <module>cloud-zipkin-server</module>
   </modules>
 
 
@@ -43,9 +64,9 @@
       </dependency>
       <!--spring cloud 2021.0.1.0-->
       <dependency>
-        <groupId>com.alibaba.cloud</groupId>
-        <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-        <version>2021.0.1.0</version>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>2021.0.1</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>

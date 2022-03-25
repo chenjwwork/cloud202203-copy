@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.srcb.dao.UserMapper">
+    <select id="queryById" resultType="User">
+        select * from `user1` where `id`=#{cc}
+    </select>
+
+
+    <select id="queryByUser" parameterType="User" resultType="User">
+        select * from `user1` where username=#{cc.username} and password=#{cc.password}
+    </select>
+
+
+    <select id="ggg"  resultType="User">
+        select * from `user1` where id = 1
+    </select>
+</mapper>

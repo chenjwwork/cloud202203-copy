@@ -1,0 +1,34 @@
+
+#端口
+server:
+  port: 1001
+
+#注册地址
+eureka:
+  instance:
+    hostname: ${spring.cloud.client.ipAddress}:${server.port} #Eruake服务端的实力名称
+  client:
+    #表示查询和注册服务的地址，多个地址可以用","表示
+    service-url: #监控页面
+      #单机defaultZone: http://localhost:7098/eureka
+      #集群（关联）
+      defaultZone: http://101.132.244.250:1000,http://120.55.14.193:1000
+    #表示是否从Eureka Server获取注册信息，默认为true（本例是单点Eureka Server，不需要同步数据）
+    fetch-registry: true
+    #表示是否将自己注册到Eureka Server中，默认为true（当前用的就是Eureka Server获取注册信息，所以设为false）
+    register-with-eureka: true
+  server:
+    #
+    eviction-interval-timer-in-ms: 5000
+    #自我保护机制
+    enable-self-preservation: true
+
+
+security:
+  basic:
+    #是否开启
+    enabled: true
+  #账号密码
+  user:
+    name: root
+    password: root
